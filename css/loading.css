@@ -1,0 +1,21 @@
+/* Loading state (js/loading.js). Uses the page's colour tokens with fallbacks. */
+.is-loading > :not(.ld):not(.ld-skel){opacity:.35;pointer-events:none;transition:opacity .2s}
+.ld{position:sticky;top:12px;z-index:20;display:grid;justify-items:center;gap:8px;text-align:center;background:var(--card,#fff);border:1px solid var(--line,#d4dcd7);border-radius:14px;padding:26px 20px 20px;margin:8px auto 14px;max-width:640px;box-shadow:0 4px 18px var(--shade,rgba(0,0,0,.08))}
+.ld h2{margin:6px 0 0;font-size:18px}
+.ld-text{margin:0;font-size:14px;color:var(--ink2,#46534b);max-width:520px}
+.ld-src{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.ld-src li{font-size:12.5px;background:var(--chip,#e7ede9);border-radius:999px;padding:3px 11px;color:var(--ink,#16201a)}
+.ld-spin{width:46px;height:46px;border-radius:50%;border:5px solid var(--chip,#e7ede9);border-top-color:var(--brand,#00a04b);animation:ld-rot .9s linear infinite}
+.ld-bar{width:min(420px,100%);height:6px;border-radius:3px;background:var(--chip,#e7ede9);overflow:hidden;margin-top:6px}
+.ld-bar i{display:block;height:100%;width:35%;border-radius:3px;background:var(--brand,#00a04b);animation:ld-slide 1.4s ease-in-out infinite}
+.ld-time{margin:2px 0 0;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.ld-note{margin:0;font-size:12.5px;color:var(--muted,#6b786f);min-height:0;max-width:480px}
+.ld-note:empty{display:none}
+.ld-skel{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:6px}
+.ld-card{background:var(--card,#fff);border:1px solid var(--line,#d4dcd7);border-radius:12px;padding:14px;display:grid;gap:9px}
+.ld-card i{display:block;height:12px;border-radius:6px;background:linear-gradient(90deg,var(--chip,#e7ede9) 25%,var(--line,#d4dcd7) 50%,var(--chip,#e7ede9) 75%);background-size:200% 100%;animation:ld-shimmer 1.4s linear infinite}
+.ld-card i:nth-child(1){width:45%}.ld-card i:nth-child(2){height:26px;width:70%}.ld-card i:nth-child(3){width:55%}
+@keyframes ld-rot{to{transform:rotate(360deg)}}
+@keyframes ld-slide{0%{margin-left:-35%}100%{margin-left:100%}}
+@keyframes ld-shimmer{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.ld-spin,.ld-bar i,.ld-card i{animation:none}.ld-bar i{width:100%;opacity:.4}}

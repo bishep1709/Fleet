@@ -1,0 +1,160 @@
+/* Home page: three short looks (yesterday / week / month) and organic sales by type. Tokens from period.css. */
+.hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:12px}
+.hcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 1px 2px var(--shade);display:grid;gap:10px;min-width:0}
+.hcard .hh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.hcard .hl{font-weight:700;font-size:15px}
+.hcard .hr{font-size:12px;color:var(--muted)}
+.hcard .big{font-size:30px;font-weight:700;line-height:1.1}
+.hcard .big small{font-size:13px;font-weight:400;color:var(--muted);margin-left:6px}
+.hcard ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.hcard li{position:relative;padding-left:16px;font-size:13.5px;line-height:1.35}
+.hcard li::before{content:"●";position:absolute;left:0;top:1px;font-size:10px;color:var(--neutral)}
+.hcard li.good::before{color:var(--good)}.hcard li.bad::before{color:var(--bad)}
+.hcard .more{font-size:13px;color:var(--ink);font-weight:600;text-decoration:none;width:fit-content}
+.hcard .more:hover{color:var(--brand)}
+.hsub{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.dwn{font-weight:600;white-space:nowrap}
+.hlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.hlinks a{font:inherit;font-size:13.5px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;text-decoration:none}
+.hlinks a:hover{border-color:var(--wire)}
+td.cell{white-space:nowrap}
+td.cell small{display:block;font-size:11.5px}
+
+.hcard li.warn::before{color:var(--warn)}
+.muted{color:var(--muted)}
+
+/* conclusions grouped like the report tabs */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+.cgroup{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 1px 2px var(--shade);display:grid;gap:8px;align-content:start;min-width:0}
+.cgroup h3{margin:0;font-size:14px;color:var(--ink)}
+.cgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.cgroup li{position:relative;padding-left:16px;font-size:13.5px;line-height:1.4}
+.cgroup li::before{content:"●";position:absolute;left:0;top:1px;font-size:10px;color:var(--neutral)}
+.cgroup li.good::before{color:var(--good)}.cgroup li.bad::before{color:var(--bad)}.cgroup li.warn::before{color:var(--warn)}
+.cgroup .more{font-size:13px;color:var(--ink);font-weight:600;text-decoration:none;width:fit-content}
+.cgroup .more:hover{color:var(--brand)}
+
+.cgroup .cm-link{color:var(--ink);text-decoration:none;font-weight:600}.cgroup .cm-link:hover{color:var(--brand);text-decoration:underline}
+.cgroup li small{display:block;color:var(--muted);font-size:12px}.cgroup li small.cm-sum{color:var(--good)}
+.sechead .more{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none}.sechead .more:hover{color:var(--brand)}
+
+.cm-warn{color:var(--warn)}.cgroup li small.cm-r-Успішна{color:var(--good)}.cgroup li small.cm-r-Неуспішна{color:var(--bad)}.cgroup li small.cm-r-Посередня{color:var(--warn)}
+
+.tgbox{display:grid;gap:6px;margin-bottom:12px}.tgnums{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:13.5px}.tgnums b{font-size:16px}.tgbox a{color:var(--ink);font-weight:650}
+
+/* card: outside — sales and the comparison; «Детальніше» opens the table and the change chart */
+.hgrid{align-items:start}
+.hcard .htop{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.hcard .htop .s{margin-top:4px}
+.hcard .hx{font:inherit;font-size:13px;font-weight:600;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
+.hcard .hx::after{content:"▾";margin-left:6px;display:inline-block;transition:transform .15s}
+.hcard .hx[aria-expanded="true"]::after{transform:rotate(180deg)}
+.hcard .hx:hover{border-color:var(--wire)}
+.hdet{display:grid;gap:12px}
+.dtab th[scope=row]{font-weight:500;color:var(--ink);font-size:13px;border-bottom:1px solid var(--chip);white-space:normal}
+.dtab th[scope=row] small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+.dtab tr.dg th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);padding-top:12px;border-bottom:1px solid var(--line)}
+.dtab tbody tr:first-child.dg th{padding-top:4px}
+.dtab td{font-variant-numeric:tabular-nums}
+.hdet .adwhy{display:grid;gap:4px;padding:8px 10px;border-radius:8px;background:var(--chip);font-size:12.5px;color:var(--ink2)}
+.chg{display:grid;gap:6px}
+.chg-h{font-size:13px;font-weight:650}
+.chg-rows{display:grid;gap:5px}
+.chg-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(70px,1fr) auto;gap:8px;align-items:center;font-size:12.5px}
+.chg-n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chg-bar{position:relative;height:12px;background:linear-gradient(var(--wire),var(--wire)) center/1px 100% no-repeat}
+.chg-bar i{position:absolute;top:1px;bottom:1px;border-radius:4px}
+.chg-bar i.up{background:var(--good)}.chg-bar i.down{background:var(--bad)}
+.chg-v{text-align:right;white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.chg-v.up{color:var(--good)}.chg-v.down{color:var(--bad)}
+.chg-v small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+.chg-cap{font-size:11.5px;color:var(--muted)}
+
+/* «Що клієнти замовляють самі»: this period (coloured) over the period before (grey), one scale */
+.selfp{display:grid;gap:12px}
+.sv-total{font-size:13px;color:var(--ink2)}
+.sv-total b{font-size:18px;color:var(--ink);margin-right:2px}
+.sv{display:grid;gap:9px}
+.sv-row{display:grid;grid-template-columns:minmax(110px,170px) minmax(0,1fr) minmax(150px,auto);gap:10px;align-items:center;font-size:13px}
+.sv-n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sv-bars{display:grid;gap:2px}
+.sv-bars i{display:block;border-radius:0 4px 4px 0;min-width:1px}
+.sv-bars i.now{height:12px}
+.sv-bars i.was{height:5px;background:var(--wire);opacity:.7}
+.sv-v{text-align:right;white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.sv-v small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+.sv-cap{font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.sv-key{display:inline-block;width:14px;border-radius:2px}
+.sv-key.now{height:9px;background:var(--ink2)}.sv-key.was{height:4px;background:var(--wire)}
+.hxrow{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:10px;font-size:13px}
+.hxbody{display:grid;gap:8px}
+.selfp .hx,.hcard .hx{font:inherit;font-size:13px;font-weight:600;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
+.selfp .hx::after{content:"▾";margin-left:6px;display:inline-block}
+.selfp .hx[aria-expanded="true"]::after{transform:rotate(180deg)}
+.hcard .big.bad{color:var(--bad)}.hcard .big.good{color:var(--good)}
+.hcard > .hxbody{padding-top:10px;border-top:1px solid var(--line)}
+.dtab td.bad{color:var(--bad);font-weight:600}
+.dtab td small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+@media (max-width:560px){.sv-row{grid-template-columns:minmax(0,1fr) auto}.sv-bars{grid-column:1/-1;grid-row:2}}
+.sv-cap{margin-top:2px}
+.prlist{max-height:440px;overflow:auto}
+.prlist thead th{position:sticky;top:0;background:var(--card)}
+.sq-row{grid-template-areas:"n b v" ". t t"}
+.sq-row .sv-n{grid-area:n}.sq-row .sv-bars{grid-area:b}.sq-row .sv-v{grid-area:v}
+.sq-terms{grid-area:t;display:flex;flex-wrap:wrap;gap:4px;margin-top:-2px}
+.sq-t{font-size:11.5px;background:var(--chip);border-radius:999px;padding:1px 8px;color:var(--ink2)}
+.sq-t b{font-weight:600;color:var(--muted)}
+@media (max-width:560px){.sq-row{grid-template-areas:"n v" "b b" "t t"}}
+
+/* «Рух до цілі»: start → now → goal, a bar, and the months against the plan */
+.hcard.goal{margin-bottom:12px}
+.gbar{position:relative;height:12px;border-radius:6px;background:var(--chip);margin:2px 0 18px}
+.gstart-l{position:absolute;top:16px;transform:translateX(-50%);font-size:11px;color:var(--ink2);white-space:nowrap}
+.gfill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--brand)}
+.gstart{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink2)}
+.gm{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end}
+.gm-plot{position:relative;height:120px;display:flex;align-items:flex-end;justify-content:center}
+.gm-b{display:block;width:62%;background:var(--brand);border-radius:4px 4px 0 0;min-height:1px}
+.gm-b.part{opacity:.5}
+.gm-p{position:absolute;left:8%;right:8%;height:2px;background:var(--ink2)}
+.gm-l{display:block;text-align:center;font-size:10.5px;color:var(--muted);margin-top:3px;white-space:nowrap}
+.sv-key.gnow{height:9px;background:var(--brand)}.sv-key.gplan{height:2px;background:var(--ink2)}
+@media (max-width:640px){.gm-l .y{display:none}.gm{gap:2px}}
+.gfull{display:grid;gap:10px}
+
+.hcard.goal .htop{align-items:flex-start}
+.gsum{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,max-content));gap:6px 40px}
+.gsum .l{font-size:12px;color:var(--muted);line-height:1.3}
+.gsum .v{font-size:24px;font-weight:700;line-height:1.2;white-space:nowrap}
+.gsum .got .v{color:var(--brand)}
+.gsum .v small{font-size:13px;font-weight:600;color:var(--ink2);margin-left:6px}
+.gsum .s{font-size:11.5px;color:var(--muted);line-height:1.3}
+.gline{margin:0;font-size:13px;color:var(--ink2)}
+@media (max-width:640px){.gsum{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 12px}.gsum .v{font-size:17px}.gsum .v small{display:block;margin:0}}
+@media (max-width:640px){.hcard.goal .gsum{flex-basis:100%}.gsum .v{white-space:normal;font-size:18px}.gsum .s{font-size:11px}}
+.blist{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:5px}
+.blist li{position:relative;padding-left:16px;font-size:13px;line-height:1.35}
+.blist li::before{content:"●";position:absolute;left:0;top:1px;font-size:10px;color:var(--neutral)}
+.blist li.bad::before{color:var(--bad)}.blist li.warn::before{color:var(--warn)}
+.hcard .big.bad{color:var(--bad)}
+.gmonths .sv-bars i.was{height:9px}
+.gmonths .sv-bars i.now{height:11px}
+.dtab tr.dg-type th,.dtab tr.dg-type td{font-weight:650;background:var(--chip)}
+.dtab th.sub,.dtab td.sub{padding-left:22px;font-weight:400}
+/* behaviour cards are narrow: label and number on one line, the bar under them */
+.bhgrid .sv-row{grid-template-columns:minmax(0,1fr) auto;gap:2px 10px}
+.bhgrid .sv-bars{grid-column:1/-1;grid-row:2}
+.bhgrid .hcard{overflow:hidden}
+.hcard > *,.hxbody > *,.hxbody > div > *{min-width:0}
+/* before the goal year: yearly paces side by side (needed / now / at the start) */
+.gpace{display:grid;gap:5px;margin-top:2px}
+.gp-row{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr) 80px;gap:10px;align-items:center;font-size:12.5px}
+.gp-l{color:var(--ink2)}
+.gp-bar{height:10px;border-radius:5px;background:var(--chip);overflow:hidden}
+.gp-bar i{display:block;height:100%;border-radius:5px}
+.gp-row.need .gp-bar i{background:var(--wire)}
+.gp-row.now .gp-bar i{background:var(--brand)}
+.gp-row.start .gp-bar i{background:var(--ink2);opacity:.45}
+.gp-v{text-align:right;font-weight:650;font-variant-numeric:tabular-nums}
+.gp-row.now .gp-v{color:var(--brand)}
+@media (max-width:640px){.gp-row{grid-template-columns:minmax(0,1fr) auto}.gp-bar{grid-column:1/-1;grid-row:2}}

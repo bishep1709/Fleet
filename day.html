@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>SytBoard — Пульс дня</title>
+<link rel="stylesheet" href="css/daymap.css">
+<link rel="stylesheet" href="css/day.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/vira.css">
+</head>
+<body>
+<div id="appnav"></div>
+<main>
+<header class="day-head">
+  <div>
+    <div class="kicker">SytBoard</div>
+    <h1>Пульс дня</h1>
+  </div>
+  <nav class="day-links" aria-label="Інші сторінки">
+    <button type="button" id="refresh-btn" class="primary">↻ Оновити дані</button>
+    <a id="report-link" href="report.html?view=day">Деталі за цей день</a>
+  </nav>
+</header>
+<div class="day-nav" role="group" aria-label="День">
+  <button type="button" id="prev-day" aria-label="Попередній день">←</button>
+  <label class="sr-only" for="day-select">День</label>
+  <select id="day-select"></select>
+  <button type="button" id="next-day" aria-label="Наступний день">→</button>
+</div>
+<p class="day-status" id="day-status" role="status"></p>
+<nav class="crumbs" id="crumbs" aria-label="Шлях"></nav>
+<div class="map" id="map"><svg class="wires" id="wires" aria-hidden="true"></svg></div>
+<footer id="foot"></footer>
+</main>
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/daymap-core.js"></script>
+<script src="js/day.js"></script>
+<script src="js/vira.js"></script>
+</body>
+</html>

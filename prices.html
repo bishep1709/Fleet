@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SytBoard — Ціни на ринку</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="css/prices.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/tasks.css">
+<link rel="stylesheet" href="css/loading.css">
+<link rel="stylesheet" href="css/vira.css">
+</head>
+<body>
+<div id="appnav"></div>
+<header class="top">
+  <div>
+    <div class="kicker">SytBoard</div>
+    <h1 class="ptitle">Ціни на ринку</h1>
+  </div>
+  <div class="refresh">
+    <span id="refStatus" class="muted"></span>
+    <button id="refBtn" class="btn">Оновити ціни</button>
+  </div>
+</header>
+<div class="subnav-wrap">
+  <nav id="nav" class="subnav" aria-label="Розділи моніторингу цін">
+    <a href="#/" data-r="insights" title="Короткі висновки з усіх цін">Інсайти</a>
+    <a href="#/partners" data-r="partners" title="Наші продукти й ціни проти тих самих продуктів у партнерів">Наші ціни у партнерів</a>
+    <a href="#/vs" data-r="vs" title="Наші продукти й ціни проти аналогів у партнерів">Наші ціни vs аналоги</a>
+    <a href="#/bases" data-r="bases" title="Продукти SYT, аналоги, зіставлення, партнери">Бази</a>
+  </nav>
+</div>
+<main id="app"><p class="muted pad">Завантаження…</p></main>
+<footer id="ver" class="muted small" style="text-align:center;padding:18px 0 28px"></footer>
+<div id="toast" class="toast" hidden></div>
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/tasks-widget.js"></script>
+<script src="js/prices-v2.js"></script>
+<script src="js/prices-tabs.js"></script>
+<script src="js/prices-draft.js"></script>
+<script src="js/prices-app.js"></script>
+<script src="js/vira.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>SytBoard — Задачі</title>
+<link rel="stylesheet" href="css/period.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/tasks.css">
+<link rel="stylesheet" href="css/vira.css">
+</head>
+<body>
+<div id="appnav"></div>
+<div class="top">
+  <div>
+    <div class="kicker">SytBoard</div>
+    <h1>Задачі</h1>
+  </div>
+  <button type="button" id="new-task" class="tk-primary">＋ Нова задача</button>
+</div>
+<div class="bar-sticky" style="position:static">
+  <div class="tk-bar">
+    <div class="seg" id="views" role="group" aria-label="Які задачі"></div>
+    <label class="sr-only" for="q">Пошук</label>
+    <input type="text" id="q" placeholder="Пошук за назвою, місцем, виконавцем" autocomplete="off">
+    <label class="sr-only" for="area">Розділ</label>
+    <select id="area"></select>
+  </div>
+</div>
+<p class="status" id="status" role="status"></p>
+<main id="board" aria-busy="true"></main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/tasks-widget.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/vira.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SytBoard — Налаштування</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="app-header">
+  <div>
+    <div class="kicker">SytBoard</div>
+    <h1 class="title">Налаштування</h1>
+  </div>
+  <div class="user-chip">
+    <span id="user-email"></span>
+    <a class="btn" href="home.html?v=20261017c">← Головна</a>
+    <button class="btn" id="logout-btn" type="button">Вийти</button>
+  </div>
+</header>
+
+<main class="deck admin-deck" id="deck">
+  <section class="block" id="ai" aria-labelledby="h-ai">
+    <div class="block-head"><h2 id="h-ai">Vira — ШІ-асистент</h2><p>Ключ провайдера зберігається зашифрованим і ніколи не показується: лише останні 4 символи.</p></div>
+    <div id="ai-body"></div>
+  </section>
+
+  <section class="block" id="clarity" aria-labelledby="h-clarity">
+    <div class="block-head"><h2 id="h-clarity">Microsoft Clarity</h2><p>Токен для вкладки «Поведінка» в щоденному звіті. Зберігається зашифрованим; видно лише останні 4 символи.</p></div>
+    <div id="clarity-body"></div>
+  </section>
+
+  <section class="block" id="google-ads" aria-labelledby="h-gads">
+    <div class="block-head"><h2 id="h-gads">Google Ads</h2><p>Витрати реклами беремо напряму з Google Ads, тільки для читання. Ключі лежать у налаштуваннях сервера. Тут видно лише, чого бракує, самих ключів не видно.</p></div>
+    <div id="gads-body"></div>
+  </section>
+
+  <section class="block" id="demand" aria-labelledby="h-demand">
+    <div class="block-head"><h2 id="h-demand">Попит у Google по Україні</h2><p>Блок «Скільки шукають у Google» у деталізованому звіті. Дані не оновлюються самі: їх беруть із файлу.</p></div>
+    <div id="demand-body"></div>
+  </section>
+
+  <section class="block" id="users" aria-labelledby="h-users">
+    <div class="block-head"><h2 id="h-users">Користувачі</h2><p>Доступ надає лише адміністратор. Дозволені тільки адреси @syngenta.com; тимчасовий пароль показується один раз.</p></div>
+    <div id="users-body"></div>
+  </section>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/fmt.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/drill.js"></script>
+<script src="js/presence.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

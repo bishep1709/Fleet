@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SytBoard — Вхід</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+<div class="auth-wrap">
+  <div class="kicker">SytBoard</div>
+  <h1>Вхід до дашборду</h1>
+
+  <form id="login-form">
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" placeholder="name@syngenta.com" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+    </div>
+    <div class="error-msg" id="error-msg" style="display:none"></div>
+    <button type="submit" id="login-btn">Увійти</button>
+    <p class="hint">Вхід лише для корпоративних адрес @syngenta.com.</p>
+  </form>
+
+  <div id="change-password-form" style="display:none">
+    <p class="hint">Це тимчасовий пароль. Задайте новий пароль (мін. 10 символів), який знатимете тільки ви.</p>
+    <div class="input-group">
+      <label for="new-password">Новий пароль</label>
+      <input id="new-password" type="password" autocomplete="new-password">
+    </div>
+    <div class="input-group">
+      <label for="new-password-confirm">Повторіть новий пароль</label>
+      <input id="new-password-confirm" type="password" autocomplete="new-password">
+    </div>
+    <div class="error-msg" id="change-error-msg" style="display:none"></div>
+    <button type="button" id="change-password-btn">Зберегти новий пароль</button>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

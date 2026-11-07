@@ -1,0 +1,14 @@
+/* SytBoard «Карта дня» page chrome; the map itself is styled by daymap.css. */
+.day-head{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.day-head .kicker{font-size:12px;color:var(--muted);letter-spacing:.03em}
+.day-head h1{font-size:21px;margin:2px 0 0}
+.day-links{display:flex;gap:6px;flex-wrap:wrap}
+.day-links a,.day-links button,.day-nav button,.day-nav select{font:inherit;font-size:13.5px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;cursor:pointer}
+.day-links a:hover,.day-links button:hover,.day-nav button:hover{border-color:var(--wire)}
+.day-nav{display:flex;align-items:center;gap:6px;margin:0 0 8px}
+.day-nav select{flex:0 1 auto;min-width:0;padding-right:28px}
+.day-nav button:disabled,.day-links button:disabled{opacity:.5;cursor:default}
+.day-links button.primary{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+.day-status{min-height:18px;margin:0 0 6px;font-size:13px;color:var(--muted)}
+.day-status.err{color:var(--bad)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

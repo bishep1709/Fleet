@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>SytBoard — Редактор стратегії</title>
+<link rel="stylesheet" href="css/period.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/strategy-edit.css">
+</head>
+<body>
+<div id="appnav"></div>
+<header class="top">
+  <div>
+    <div class="kicker"><a href="strategy.html">← Виконання стратегії</a> · редактор</div>
+    <h1>Редактор стратегії</h1>
+  </div>
+  <div class="ctl">
+    <button type="button" id="undo" disabled>Скасувати зміни</button>
+    <button type="button" id="save" class="primary" disabled>Зберегти</button>
+  </div>
+</header>
+<p class="status" id="status" role="status"></p>
+<main id="editor" class="se" aria-busy="true">
+  <nav class="se-nav" id="blocks" aria-label="Блоки стратегії"></nav>
+  <div class="se-form" id="form"></div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/fmt.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/strategy-edit.js"></script>
+</body>
+</html>

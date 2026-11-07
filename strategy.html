@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>SytBoard — Виконання стратегії</title>
+<link rel="stylesheet" href="css/period.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/loading.css">
+<link rel="stylesheet" href="css/strategy.css">
+</head>
+<body>
+<div id="appnav"></div>
+<header class="top">
+  <div>
+    <div class="kicker">SytBoard · стратегія 2026–2027</div>
+    <h1>Виконання стратегії інтернет-магазину</h1>
+  </div>
+  <div class="ctl">
+    <a class="st-edit" href="strategy-edit.html" title="Змінити будь-який текст, ціль чи показник стратегії">✎ Редагувати</a>
+    <button type="button" id="present" aria-pressed="false" title="Більший шрифт і без зайвого — для показу на екрані">Режим показу</button>
+    <button type="button" id="refresh" title="Перечитати BAS, Google Analytics, Search Console, Notion і ціни">↻ Оновити</button>
+  </div>
+</header>
+<nav class="jump st-jump" aria-label="Розділи стратегії">
+  <a href="#goal">Ціль</a><a href="#kpi">Показники</a><a href="#path">Шлях до $925 тис.</a><a href="#plan">Що робимо</a><a href="#voice">Що кажемо</a><a href="#market">Конкуренти й ціни</a><a href="#tasks">Етапи й задачі</a><a href="#risks">Ризики й рішення</a>
+</nav>
+<p class="status" id="status" role="status"></p>
+<main id="strategy" aria-busy="true"></main>
+<div class="st-tip" id="tip" role="tooltip" hidden></div>
+
+<script src="js/api.js"></script>
+<script src="js/fmt.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/strategy.js"></script>
+</body>
+</html>

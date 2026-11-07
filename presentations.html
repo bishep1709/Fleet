@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>SytBoard — Презентації</title>
+<link rel="stylesheet" href="css/period.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/presentations.css">
+<link rel="stylesheet" href="css/vira.css">
+</head>
+<body>
+<div id="appnav"></div>
+<div class="top">
+  <div>
+    <div class="kicker">SytBoard</div>
+    <h1>Презентації</h1>
+  </div>
+</div>
+<p class="status" id="status" role="status"></p>
+<main>
+  <!-- the decks to choose from -->
+  <div id="library" class="ps-lib" aria-busy="true" aria-label="Презентації"></div>
+  <!-- one deck: controls above, slides below -->
+  <div id="viewer" hidden>
+    <div class="ps-bar">
+      <button type="button" id="ps-back">← Усі презентації</button>
+      <span id="deck-title"></span>
+      <span class="sp"></span>
+      <button type="button" id="ps-prev" aria-label="Попередній слайд">‹</button>
+      <span id="ps-count" aria-live="polite"></span>
+      <button type="button" id="ps-next" aria-label="Наступний слайд">›</button>
+      <button type="button" id="ps-full">На весь екран</button>
+      <button type="button" id="ps-pdf">Завантажити PDF</button>
+      <button type="button" id="ps-edit" class="primary">✎ Редагувати</button>
+      <span id="pe-bar" class="pe-bar" hidden>
+        <button type="button" id="pe-cancel">Скасувати зміни</button>
+        <button type="button" id="pe-save" class="primary">Зберегти</button>
+        <button type="button" id="pe-done">Готово</button>
+      </span>
+    </div>
+    <div class="ps-work">
+      <aside id="pe-left" class="pe-left" hidden aria-label="Слайди презентації"></aside>
+      <div id="stage" class="ps-stage" tabindex="0" aria-label="Слайди: стрілки вліво й вправо гортають"></div>
+      <div id="pe-right" class="pe-right" hidden aria-label="Редагування слайда"></div>
+    </div>
+  </div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/presentations.js"></script>
+<script src="js/vira.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Period picker with a calendar (js/rangepicker.js). Tokens from period.css. */
+.rangebtn{font:inherit;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+.rangebtn:hover,.rangebtn[aria-expanded="true"]{border-color:var(--wire)}
+.rangebtn::after{content:"▾";color:var(--muted);font-size:11px}
+.rp-ico{font-size:14px;line-height:1}
+.rp-panel{position:absolute;z-index:40;top:calc(100% + 6px);left:0;display:grid;grid-template-columns:auto 1fr;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 28px var(--shade);min-width:min(640px,calc(100vw - 32px))}
+.rp-presets{display:grid;align-content:start;gap:2px;padding:10px;border-right:1px solid var(--line);min-width:150px}
+.rp-presets button{font:inherit;font-size:13px;text-align:left;background:none;border:0;border-radius:6px;padding:7px 10px;color:var(--ink);cursor:pointer}
+.rp-presets button:hover{background:var(--chip)}
+.rp-presets button[aria-pressed="true"]{background:var(--sel);font-weight:600}
+.rp-cal{padding:10px 12px;display:grid;gap:8px}
+.rp-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.rp-hint{font-size:12.5px;color:var(--ink2);text-align:center;flex:1}
+.rp-nav{font:inherit;font-size:18px;line-height:1;width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.rp-nav:disabled{opacity:.35;cursor:default}
+.rp-months{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rp-mname{font-size:13px;font-weight:650;text-align:center;margin-bottom:4px}
+.rp-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px 0}
+.rp-wd{font-size:11px;color:var(--muted);text-align:center;padding:2px 0}
+.rp-day{font:inherit;font-size:12.5px;height:32px;border:0;background:none;color:var(--ink);cursor:pointer;border-radius:0;font-variant-numeric:tabular-nums}
+.rp-day:hover:not(:disabled){background:var(--chip);border-radius:6px}
+.rp-day.in{background:var(--sel)}
+.rp-day.start,.rp-day.end{background:var(--brand);color:#fff;font-weight:650}
+.rp-day.start{border-radius:6px 0 0 6px}.rp-day.end{border-radius:0 6px 6px 0}.rp-day.start.end{border-radius:6px}
+.rp-day.today:not(.start):not(.end){box-shadow:inset 0 0 0 1px var(--wire);border-radius:6px}
+.rp-day:disabled{color:var(--line);cursor:default}
+.rp-foot{display:flex;justify-content:flex-end;gap:8px;border-top:1px solid var(--line);padding-top:8px}
+.rp-foot button{font:inherit;font-size:13px;border-radius:8px;padding:7px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.rp-foot button.primary{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+.rp-foot button:disabled{opacity:.45;cursor:default}
+@media (max-width:640px){
+  .rp-panel{position:fixed;left:16px;right:16px;top:auto;bottom:16px;grid-template-columns:1fr;min-width:0;max-height:calc(100vh - 32px);overflow:auto}
+  .rp-presets{grid-template-columns:repeat(2,1fr);border-right:0;border-bottom:1px solid var(--line)}
+  .rp-months{grid-template-columns:1fr}
+  .rp-months .rp-month:first-child{display:none}
+}

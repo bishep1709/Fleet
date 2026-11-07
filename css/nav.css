@@ -1,0 +1,21 @@
+/* Shared top bar of every SytBoard page (js/nav.js). Uses each page's own colour tokens with fallbacks. */
+.appnav{background:var(--card,#fff);border-bottom:1px solid var(--line,#d4dcd7);position:relative;z-index:30}
+.appnav .in{max-width:1760px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:6px 12px;flex-wrap:wrap}
+.appnav .brand{font-weight:800;letter-spacing:.02em;color:var(--brand,#00a04b);text-decoration:none;font-size:16px;margin-right:6px}
+.appnav .links{display:flex;gap:4px;flex-wrap:wrap}
+.appnav a.nav{font:inherit;font-size:13.5px;color:var(--ink,#16201a);text-decoration:none;border:1px solid transparent;border-radius:999px;padding:6px 13px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.appnav a.nav:hover{border-color:var(--wire,#9fb3a7)}
+.appnav a.nav[aria-current="page"]{background:var(--brand,#00a04b);border-color:var(--brand,#00a04b);color:#fff;font-weight:600}
+.appnav .nb{font-size:11.5px;font-weight:700;border-radius:999px;padding:0 6px;min-width:18px;text-align:center;line-height:17px;background:var(--chip,#e7ede9);color:var(--ink,#16201a)}
+.appnav .nb.hot{background:var(--bad,#c93a30);color:#fff}
+.appnav a.nav[aria-current="page"] .nb{background:rgba(255,255,255,.25);color:#fff}
+.appnav .sp{flex:1}
+.appnav .who{font-size:12.5px;color:var(--muted,#6b786f)}
+.appnav button.out{font:inherit;font-size:13px;color:var(--ink,#16201a);background:transparent;border:1px solid var(--line,#d4dcd7);border-radius:999px;padding:5px 12px;cursor:pointer}
+.appnav button.out:hover{border-color:var(--wire,#9fb3a7)}
+@media (max-width:640px){.appnav .who{display:none}}
+/* «Beta» above a section name */
+.appnav a.nav .nl{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1.05}
+.appnav a.nav .bt{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--warn,#b77a00)}
+.appnav a.nav[aria-current="page"] .bt{color:rgba(255,255,255,.85)}
+.appnav a.nav.beta{padding-top:3px;padding-bottom:3px}
